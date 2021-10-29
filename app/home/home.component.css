@@ -1,0 +1,33 @@
+body{
+         
+    background-image: url(src\assets\images\backgroundimage.jpg);
+    padding-left: 40px;
+    padding-bottom: 720px;
+    
+}
+input
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color:#fff;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align:center;
+    padding: 70px 30px;
+    top: 50%;
+    left: 50%;
+    width:440px;
+   height: 30px;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   box-shadow: 0 0 20px rgba(0, 0, 0.15);
+}
+input:hover
+{
+    background-color:#fff;
+    transform: scale(1.5);
+    transition: transform 300ms ease-in;
+}

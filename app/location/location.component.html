@@ -1,0 +1,78 @@
+<html>
+  <body class="locationbox">
+    <h1><label>Locations: </label>  
+<select  placeholder="select ur loc" (change)="SelectLocation($event.target.value)">    
+                            <option value="0">--------Select--------</option>  
+                            <option *ngFor="let loc of location" value={{loc}} >  
+                                {{loc}}  
+                            </option>  
+     </select></h1>  
+   <br>
+   
+   <br>
+     <mat-form-field appearance="fill">
+       <mat-label >Choose start date</mat-label>
+       <input matInput [matDatepicker]="picker" [(ngModel)]="selectedStartDate" (dateChange)="getstartDate(selectedStartDate)">
+       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+       <mat-datepicker #picker></mat-datepicker>
+     </mat-form-field>
+     <mat-form-field appearance="fill">
+       <mat-label >Choose end date</mat-label>
+       <input matInput [matDatepicker]="picker1" [(ngModel)]="selectedEndDate" (dateChange)="getendDate(selectedEndDate)"> 
+       <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+       <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <br>
+      <br>
+     <button (click)=  onbooks($event) class="button" (click)="onBookButtonClick()" [disabled]="!roomStatus">Book</button>
+     <br>
+   <br>
+    
+<div class="div2" *ngFor="let loc of table"> 
+<input type="radio"  id="select" name="select" (change)="onSelectionChange(loc)">  
+<br>
+<h1><label>Select to book a room</label></h1> 
+<ul>
+Location Name={{ loc.location_name}}
+<br>
+Location Address={{ loc.location_address}}
+<br>
+RoomType={{ loc.room_type_name }}
+<br>
+Status={{loc.status}}
+<br>
+LocationId={{loc.location_id}}
+<br>
+RoomId={{loc.room_id}}
+<div class="popup" (click) = onselect(loc)>Click for more details
+ <span class="popuptext" id="myPopup"> 
+   <ul>
+    <li>location Id={{element.location_id}}</li>
+    <br>
+    <li>room Id={{element.room_id}}</li>
+    <br>
+   <li>seating capacity={{element.seating_capacity}}</li>
+   <br>
+   <li>table type={{element.table_types}}</li>
+   <br>
+   <li>screen={{element.screen}}</li>
+   <br>
+   <li>projector={{element.projector}}</li>
+   <br>
+   <li>number of machines={{element.no_of_machines}}</li>
+   <br>
+   <li>white board={{element.white_board}}</li>
+   <br>
+   <li>flip chart={{element.flip_chart}}</li>
+   <br>
+   <li>network="{{element.network}}"</li>
+   <br>
+   <li>internet connection={{element.internet_connection}}</li>
+ </ul>
+ </span>
+</div>
+
+</ul>
+</div>
+</body>
+</html>

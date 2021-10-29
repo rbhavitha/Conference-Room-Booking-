@@ -1,0 +1,22 @@
+<html>
+    <body>
+       
+        <div class="loginbox">
+            <img src="loginlogo.png" class=logo>
+            <h1>User Login Here</h1>
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+                <p>UserId</p>   
+            <input type="text" name="id" placeholder="Enter UserId" ngModel>
+                <br>
+                <br> 
+                <p>Password</p>         
+                <input type="password" name="password" placeholder="Enter Password" ngModel>
+                <br>
+                <br>
+                <input type="submit" class ="btn btn-primary"  value="login"/> 
+                           
+            </form>          
+        </div>
+       
+    </body>
+</html>

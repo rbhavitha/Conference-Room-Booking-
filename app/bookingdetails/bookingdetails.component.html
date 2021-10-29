@@ -1,0 +1,43 @@
+<html>
+<body class="bookingdetailsbox">
+    <div>
+        <table>
+            <tr>
+                <th>userid</th>
+                <th>Username</th>
+                <th>Location</th>
+                <th>city</th>
+                <th>room id</th>
+                <th>start date</th>
+                <th>end date</th>
+                <th>status</th>
+                <th>owner details</th>
+            </tr>
+            <br>
+            <br>
+            <tr *ngFor="let c of table1">
+                <td>{{c.user_id}}</td>
+                <td>{{c.user_name}}</td>
+                <td>{{c.location_name}}</td>
+                <td>{{c.location_address}}</td>
+                <td>{{c.room_id}}</td>
+                <td >{{c.start_date}}</td>
+                <td>{{c.end_date}}</td>
+                <td>confirmed</td>
+                <td>
+                    {{c.owner_name}}
+                    <br>
+                    {{c.owner_phno}}
+                    <br>
+                    {{c.owner_emailid}}
+                </td>
+                
+    
+            </tr>
+        </table>
+        <br>
+        <br>
+        <button mat-raised-button (click)="OpenDialog()" class="button">Bookingstatus</button>
+    </div>
+</body>
+</html>

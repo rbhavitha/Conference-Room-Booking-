@@ -1,0 +1,74 @@
+html{
+    background-image: url(src\assets\images\backgroundimage.jpg);
+    padding-left: 400px;
+    padding-bottom: 720px;
+}
+.bookingdetailsbox{
+    width:620px;
+    height: 470px;
+    color: black;
+    top: 55%;
+    left: 45%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    place-items: center;
+    font-family: sans-serif;
+    
+}
+
+table{
+
+	width: 300px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0.15);
+}
+td, tr, th{
+
+	padding: 0px;
+
+	border: 1px solid lightgray;
+
+	border-collapse: collapse;
+
+	text-align: center;
+
+	cursor: pointer;
+
+}
+td{
+
+	font-size: 18px;
+
+}
+
+th{
+
+	background-color:darkturquoise;
+
+	color: white;
+
+}
+
+
+tr:nth-child(even){
+
+	background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+tr:nth-child(even):hover{
+
+	background-color: lightgray;
+
+	transform: scale(1.5);
+
+	transition: transform 300ms ease-in;
+
+
+}
+
+
+
+

@@ -1,0 +1,42 @@
+<html>
+  <body class="admin">
+<h1><label>Select Department: </label> 
+            <select (change)="SelectDepartment($event.target.value)" name= "select">
+                <option value="0">--------Select-------</option>
+                <option *ngFor="let d of dept" value={{d}}>{{d}}</option>
+            </select> 
+
+<label>Select RoomType: </label> 
+            <select (change)="SelectRoomType($event.target.value)" name= "select">
+                <option value="0">--------Select--------</option>
+                <option *ngFor="let r of roomtype" value={{r}}>{{r}}</option>
+            </select> </h1>
+            <br><br><br>
+            <br><br>
+<input type="button" (click)=  loadData($event) class="button" value="Click" />
+<br><br><br>
+<div>
+    <div>
+      <table>
+        <thead>
+          <tr><th>User Name</th>
+          <th>Department Name</th>
+          <th>RoomType Name</th>
+          <th>Room ID</th>
+        </tr>
+    
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of book">
+            <td>{{b.user_name}}</td>
+            <td>{{b.dept_name}}</td>
+            <td>{{b.room_type_name}}</td>
+            <td>{{b.room_id}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+  </body>
+</html>
